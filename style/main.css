@@ -52,7 +52,7 @@ body{
         clip-path: ellipse(100% 90% at 59% 0);
     }
     .diagonal-bckg h1{
-        padding-top:  0rem;
+        font-size: 40px;       
     }
 }
 
@@ -61,6 +61,6 @@ body{
         clip-path: ellipse(100% 90% at 59% 0);
     }   
     .diagonal-bckg h1{
-        padding-top:  -1rem;
+        font-size: 40px;       
     }
 }
