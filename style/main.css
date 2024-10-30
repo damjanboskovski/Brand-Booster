@@ -8,7 +8,7 @@ body{
     height: 400px;
     background-color: white; /* Background color */
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 50px 50px;
     overflow: hidden; /* Hide overflow */
 }
@@ -21,28 +21,46 @@ body{
     right: 0;
     bottom: 0;
     background-color: rgb(11, 177, 135); /* Diagonal cut color */
-    clip-path: polygon(0 0, 100% 0, 60% 80%, 0 100%); /* Creates the diagonal cut */
+    clip-path: ellipse(78% 94% at 59% 0); /* Creates the diagonal cut */
     z-index: 0; /* Behind the content */
 }
 
 .diagonal-bckg h1{
+    padding-top:  4rem;
     position: relative; /* For stacking order */
     z-index: 1; /* Bring text above the diagonal */
+    font-size: 60px;
+    margin-bottom: 2rem;
 }
 
 .diagonal-bckg p{
     position: relative; /* For stacking order */
     z-index: 1; /* Bring text above the diagonal */
+    font-size: 16px;
+}
+
+.offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 200px;
 }
 
 @media(max-width: 800px){
     .diagonal-bckg::before{
-        clip-path: polygon(0 0, 100% 0, 80% 80%, 0 100%);
-    }   
+        clip-path: ellipse(100% 90% at 59% 0);
+    }
+    .diagonal-bckg h1{
+        padding-top:  0rem;
+    }
 }
 
 @media(max-width: 400px){
     .diagonal-bckg::before{
-        clip-path: polygon(0 0, 100% 0, 80% 80%, 0 100%);
+        clip-path: ellipse(100% 90% at 59% 0);
     }   
+    .diagonal-bckg h1{
+        padding-top:  -1rem;
+    }
 }

@@ -37,11 +37,12 @@ nav a{
     display: flex;
     align-items: center;
     color: rgb(255, 255, 255);
-    transition: color 0.3s;
+    transition: color 0.3s ease-in;
 }
 
 nav a:hover{
     color: rgb(2, 241, 202);
+    font-weight: bold;
 }
 
 nav li:first-child{
