@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    color: black;
+}
+
+.diagonal-bckg{
+    position: relative;
+    height: 400px;
+    background-color: white; /* Background color */
+    color: white;
+    text-align: left;
+    padding: 50px 50px;
+    overflow: hidden; /* Hide overflow */
+}
+
+.diagonal-bckg::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(11, 177, 135); /* Diagonal cut color */
+    clip-path: polygon(0 0, 100% 0, 60% 80%, 0 100%); /* Creates the diagonal cut */
+    z-index: 0; /* Behind the content */
+}
+
+.diagonal-bckg h1{
+    position: relative; /* For stacking order */
+    z-index: 1; /* Bring text above the diagonal */
+}
+
+.diagonal-bckg p{
+    position: relative; /* For stacking order */
+    z-index: 1; /* Bring text above the diagonal */
+}
+
+@media(max-width: 800px){
+    .diagonal-bckg::before{
+        clip-path: polygon(0 0, 100% 0, 80% 80%, 0 100%);
+    }   
+}
+
+@media(max-width: 400px){
+    .diagonal-bckg::before{
+        clip-path: polygon(0 0, 100% 0, 80% 80%, 0 100%);
+    }   
+}
